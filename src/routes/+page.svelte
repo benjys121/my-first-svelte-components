@@ -6,7 +6,9 @@ This is your page!
   // Import all the news furniture components
   import ArticleHeader from '$lib/components/Article/ArticleHeader.svelte';
   import ArticleBody from '$lib/components/Article/ArticleBody.svelte';
-  import Blockquote from '$lib/components/Article/Blockquote.svelte';
+  import Blockquote from '$lib/components/Blockquote.svelte';
+  import BigNumber from '$lib/components/Data/BigNumber.svelte';
+  import Dashboard from '$lib/components/Data/Dashboard.svelte';
   import Image from '$lib/components/Media/Image.svelte';
   import RelatedLinks from '$lib/components/Article/RelatedLinks.svelte';
 
@@ -56,6 +58,28 @@ This is your page!
     credit="Craig Newmark Graduate School of Journalism"
   />
 
+<Dashboard>
+
+<BigNumber
+  number="2006"
+  label="Year Founded"
+/>
+
+<BigNumber
+  number="1,300"
+  label="Alumni"
+/>
+
+<BigNumber
+  number="50%"
+  label="Attend tuition free"
+  footnote="As of Aug. 2025"
+/>
+
+</Dashboard>
+
+
+
   <!-- Article Body: The main story text with proper typography -->
   <ArticleBody>
     <p class="dropcap">
@@ -70,8 +94,15 @@ This is your page!
       and technological skills alongside reporting, writing, and ethics. Beyond
       that, we’ve crafted a culture that spurns complacency, that isn’t afraid
       to pivot before the ground under us shifts.
+      
     </p>
 
+          <Blockquote
+  quote="As I look back over a misspent life I find myself more and more convinced that I had more fun doing news reporting than in any other enterprise. It is really the life of kings."
+  attribution="H.L. Mencken"
+/>
+
+ 
     <p>
       Our mission is to serve the public interest – by training new journalists
       from varied economic, racial, and cultural backgrounds who will bring
@@ -80,9 +111,10 @@ This is your page!
       find new paths to excellence.
     </p>
 
-    <Blockquote attribution="Craig Newmark Graduate School of Journalism">
-      <p>We invite you to be part of our world.</p>
-    </Blockquote>
+              <Blockquote
+  quote="As I look back over a misspent life I find myself more and more convinced that I had more fun doing news reporting than in any other enterprise. It is really the life of kings."
+  attribution="H.L. Mencken"
+/>
 
     <p>
       Our low tuition rates, along with the added backing of private donors,

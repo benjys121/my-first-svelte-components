@@ -8,7 +8,7 @@ Uses sans-serif font for body, serif for subheadings.
 USAGE EXAMPLE:
 <ArticleBody>
   <p>Your article paragraphs go here...</p>
-  <p>Each paragraph will be properly styled.</p>
+  <p>Format correctly.</p>
 </ArticleBody>
 -->
 <script>
