@@ -11,18 +11,15 @@ This is your page!
   import Dashboard from '$lib/components/Data/Dashboard.svelte';
   import Image from '$lib/components/Media/Image.svelte';
   import RelatedLinks from '$lib/components/Article/RelatedLinks.svelte';
+import BreakingNewsBanner from '$lib/components/Layout/BreakingNewsBanner.svelte';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
   let byline = 'NYCity News Service';
   let pubDate = '2026-01-31';
-
-  // Related stories
-  const relatedStories = [
-    {
-      headline:
-        "How America's top news organizations escape rigid publishing systems to design beautiful data-driven stories on deadline.",
-      href: 'https://palewi.re/docs/coding-the-news/',
+  let breakingHeadline =
+    'Breaking: New journalism fellowship announced — click to learn more.';
+  let breakingLink = 'https://www.nycitynewsservice.com/latest-news/';
     },
     {
       headline:
@@ -44,6 +41,8 @@ This is your page!
     content="At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined."
   />
 </svelte:head>
+
+<BreakingNewsBanner headline={breakingHeadline} href={breakingLink} />
 
 <!-- Your page content goes here -->
 <div class="container">

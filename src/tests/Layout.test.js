@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import SiteHeader from '$lib/components/Layout/SiteHeader.svelte';
 import SiteFooter from '$lib/components/Layout/SiteFooter.svelte';
+import BreakingNewsBanner from '$lib/components/Layout/BreakingNewsBanner.svelte';
 
 describe('SiteHeader', () => {
   it('renders the logo', () => {
@@ -46,5 +47,22 @@ describe('SiteFooter', () => {
     render(SiteFooter);
     expect(screen.getByText('ABOUT US')).toBeTruthy();
     expect(screen.getByText('CONTACT US')).toBeTruthy();
+  });
+});
+
+describe('BreakingNewsBanner', () => {
+  it('renders the headline and link', () => {
+    render(BreakingNewsBanner, {
+      props: {
+        headline: 'Breaking: Sample alert headline.',
+        href: 'https://example.com/breaking-news',
+      },
+    });
+
+    expect(screen.getByText('Breaking: Sample alert headline.')).toBeTruthy();
+    expect(screen.getByRole('link')).toHaveAttribute(
+      'href',
+      'https://example.com/breaking-news'
+    );
   });
 });
