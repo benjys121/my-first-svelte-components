@@ -12,6 +12,7 @@ This is your page!
   import Image from '$lib/components/Media/Image.svelte';
   import RelatedLinks from '$lib/components/Article/RelatedLinks.svelte';
   import BreakingNewsBanner from '$lib/components/Layout/BreakingNewsBanner.svelte';
+  import ShareButtons from '$lib/components/Article/ShareButtons.svelte';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
@@ -20,6 +21,8 @@ This is your page!
   let breakingHeadline =
     'Breaking: New journalism fellowship announced — click to learn more.';
   let breakingLink = 'https://www.nycitynewsservice.com/latest-news/';
+  // URL to use for sharing; replace with per-article canonical URL as needed
+  let articleUrl = 'https://example.com/article/this-article';
 
   // Related stories
   const relatedStories = [
@@ -156,5 +159,7 @@ This is your page!
   </ArticleBody>
 
   <!-- Related Stories: Links to other articles -->
+  <ShareButtons url={articleUrl} title={headline} via="nycitynews" />
+
   <RelatedLinks title="Related Stories" links={relatedStories} />
 </div>
